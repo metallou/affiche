@@ -62,6 +62,7 @@ body
     background-color: #7F7F7F;
     margin: 0;
     padding: 0;
+    font-weight: bold;
     color: #FFFFFF;
 }
 
@@ -70,7 +71,7 @@ body
     position: relative;
 }
 
-#title, #actors, #makers, #slogan
+#title, #slogan, #bottom-text
 {
     position: absolute;
     display: flex;
@@ -80,47 +81,48 @@ body
 
 #title
 {
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%,0);
-    width: 100%;
-    font-family: Times, serif;
-    font-weight: bold;
-    text-align: center;
-    text-shadow: #FF0000 0.25vw 0.25vh, #FF0000 -0.25vw 0.25vh, #FF0000 0.25vw -0.25vh, #FF0000 -0.25vw -0.25vh;
-}
-
-.cast
-{
+    flex-direction: row;
     top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 1.5% 0;
+    align-items: baseline;
     font-family: Arial, sans-serif;
-    line-height: 1.25;
+    text-align: center;
+    text-shadow: #FF0000 0.2vw 0.2vh, #FF0000 -0.2vw 0.2vh, #FF0000 0.2vw -0.2vh, #FF0000 -0.2vw -0.2vh;
 }
 
-.info
+#title :first-child, #title :last-child
 {
-    font-size: 75%;
-}
-
-#actors
-{
-    left: 0;
-    color: #FFBFBF;
-}
-
-#makers
-{
-    text-align: right;
-    right: 0;
-    color: #BFBFFF;
+    font-size: 120%;
 }
 
 #slogan
 {
-    position: absolute;
+    top: 57%;
+    left: 7.5%;
+    font-family: Futura, sans-serif;
+    line-height: 0.9;
+    color: #FFBFBF;
+    text-shadow: #7F7F7F 0.125vw 0.125vh 0.1vmin, #7F7F7F -0.125vw 0.125vh 0.1vmin, #7F7F7F 0.125vw -0.125vh 0.1vmin, #7F7F7F -0.125vw -0.125vh 0.1vmin;
+}
+
+#slogan :nth-child(3)
+{
+    font-size: 120%;
+    font-style: italic;
+}
+
+#bottom-text
+{
     bottom: 0;
     left: 50%;
-    transform: translate(-50%, 0);
+    width: 300%;
+    transform: translate(-50%, 0) scaleX(0.25);
+    font-family: monospace;
+    text-align: center;
+    margin: 0;
+    line-height: 0.9;
 }
 
 /* ------------------------------------------------------Project CSS big screen */
@@ -132,7 +134,7 @@ body
         height: 99vh;
         left: 50%;
         transform: translate(-50%);
-        font-size: 2vmin;
+        font-size: 2vh;
     }
 
     img
@@ -143,15 +145,15 @@ body
 
     #title
     {
-        font-size: 500%;
-    }
-
-    .cast
-    {
-        font-size: 200%;
+        font-size: 435%;
     }
 
     #slogan
+    {
+        font-size: 240%;
+    }
+
+    #bottom-text
     {
         font-size: 150%;
     }
@@ -168,16 +170,17 @@ body
 
     #title
     {
-        font-size: 10vw;
-    }
-
-    .cast
-    {
-        font-size: 4vw;
+        font-size: 13.5vw;
     }
 
     #slogan
     {
-        font-size: 3vw;
+        font-size: 7.25vw;
+    }
+
+    #bottom-text
+    {
+        font-size: 5vw;
+        margin-bottom: 1%;
     }
 }
