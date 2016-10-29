@@ -95,7 +95,7 @@ body
     align-items: baseline;
     font-family: Arial, sans-serif;
     text-align: center;
-    text-shadow: #FF0000 0.2vw 0.2vh, #FF0000 -0.2vw 0.2vh, #FF0000 0.2vw -0.2vh, #FF0000 -0.2vw -0.2vh;
+    text-shadow: #FF0000 0.125vw 0.1vh, #FF0000 -0.1vw 0.1vh, #FF0000 0.1vw -0.1vh, #FF0000 -0.1vw -0.1vh;
 }
 
 #title :first-child, #title :last-child
