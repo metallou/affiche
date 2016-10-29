@@ -109,8 +109,6 @@ body
     left: 7.5%;
     font-family: Futura, sans-serif;
     line-height: 0.9;
-    color: #FFBFBF;
-    text-shadow: #7F7F7F 0.125vw 0.125vh 0.1vmin, #7F7F7F -0.125vw 0.125vh 0.1vmin, #7F7F7F 0.125vw -0.125vh 0.1vmin, #7F7F7F -0.125vw -0.125vh 0.1vmin;
 }
 
 #slogan :nth-child(3)
