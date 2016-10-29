@@ -66,7 +66,13 @@ body
     color: #FFFFFF;
 }
 
-#container
+#master-container
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.container
 {
     position: relative;
 }
@@ -125,16 +131,21 @@ body
     line-height: 0.9;
 }
 
-/* ------------------------------------------------------Project CSS big screen */
+@media screen and (min-width: 901px)
+{
+    #master-container
+    {
+        flex-direction: row;
+    }
+}
+
 @media screen and (min-width: 501px)
 {
-    #container
+    .container
     {
-        display: inline-block;
         height: 99vh;
-        left: 50%;
-        transform: translate(-50%);
         font-size: 2vh;
+        margin: 0 auto;
     }
 
     img
@@ -159,12 +170,11 @@ body
     }
 }
 
-/* ------------------------------------------------------Project CSS small screen */
 @media screen and (max-width: 500px)
 {
     img
     {
-        width: 99vw;
+        width: 100%;
         max-height: 100%;
     }
 
