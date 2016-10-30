@@ -56,7 +56,7 @@ table
 }
 
 
-/* ------------------------------------------------------Project CSS computer */
+/* ------------------------------------------------------Font definition */
 @font-face
 {
     font-family: Serif-Gothic-Black;
@@ -69,48 +69,49 @@ table
     src: url(compacta_light.ttf);
 }
 
+/* ------------------------------------------------------CSS */
 body
 {
-    background-color: #7F7F7F;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: #FFFFFF;
-    box-sizing: border-box;
+    color: #F0F0F0;
+    background-color: #FFFFFF;
 }
 
 #master-container
 {
     display: flex;
-    flex-flow: column wrap;
     height: 100%;
     width: 100%;
+    flex-direction: column;
     justify-content: space-around;
     align-content: center;
 }
 
 .image-container
 {
-    position: relative;
     display: block;
+    position: relative;
 }
 
 #title, #slogan, #credits
 {
-    position: absolute;
     display: flex;
+    position: absolute;
     flex-direction: column;
 }
 
 #title
 {
-    flex-direction: row;
     top: 2.5%;
     left: 50%;
     transform: translate(-50%);
+    flex-direction: row;
     align-items: baseline;
-    font-family: Serif-Gothic-Black, Arial, sans-serif;
     text-align: center;
-    text-shadow: #FF0000 0.125vw 0.1vh, #FF0000 -0.1vw 0.1vh, #FF0000 0.1vw -0.1vh, #FF0000 -0.1vw -0.1vh;
+    font-family: Serif-Gothic-Black, Arial, sans-serif;
+    text-shadow: #AB6E2C 0.125vw 0.1vh, #AB6E2C -0.1vw 0.1vh, #AB6E2C 0.1vw -0.1vh, #AB6E2C -0.1vw -0.1vh;
 }
 
 #title :first-child, #title :last-child
@@ -140,9 +141,9 @@ body
 
 #slogan
 {
-    top: 54%;
+    top: 55.5%;
     left: 50%;
-    transform: translate(-180%) scaleX(0.9);
+    transform: translate(-192%) scaleX(0.9);
     font-family: Serif-Gothic-Black, Arial, serif;
     line-height: 0.85;
     letter-spacing: -0.3vw;
@@ -156,12 +157,13 @@ body
 
 #credits
 {
-    bottom: 3.5%;
+    bottom: 3.75%;
     left: 50%;
     width: 175%;
     transform: translate(-50%, 0) scaleX(0.6);
-    font-family: Compacta-Light, monospace;
     text-align: center;
+    font-family: Compacta-Light, monospace;
+    color: #AFAFAF;
     white-space: pre;
     line-height: 0.9;
 }
@@ -197,6 +199,7 @@ body
 
     #slogan
     {
+        transform: translate(-180%) scaleX(0.9);
         font-size: 240%;
     }
 
@@ -220,11 +223,14 @@ body
 
     #slogan
     {
+        transform: translate(-175%) scaleX(0.9);
         font-size: 7.25vw;
     }
 
     #credits
     {
+        bottom: 4.5%;
         font-size: 5vw;
+        line-height: 0.8;
     }
 }
