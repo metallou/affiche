@@ -60,13 +60,13 @@ table
 @font-face
 {
     font-family: Serif-Gothic-Black;
-    src: url(serif_gothic_black.ttf);
+    src: url(font/serif_gothic_black.ttf);
 }
 
 @font-face
 {
     font-family: Compacta-Light;
-    src: url(compacta_light.ttf);
+    src: url(font/compacta_light.ttf);
 }
 
 /* ------------------------------------------------------CSS */
