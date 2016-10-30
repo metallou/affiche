@@ -57,43 +57,58 @@ table
 
 
 /* ------------------------------------------------------Project CSS computer */
+@font-face
+{
+    font-family: Serif-Gothic-Black;
+    src: url(serif_gothic_black.ttf);
+}
+
+@font-face
+{
+    font-family: Compacta-Light;
+    src: url(compacta_light.ttf);
+}
+
 body
 {
     background-color: #7F7F7F;
     margin: 0;
     padding: 0;
-    font-weight: bold;
     color: #FFFFFF;
+    box-sizing: border-box;
 }
 
 #master-container
 {
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
+    height: 100%;
+    width: 100%;
+    justify-content: space-around;
+    align-content: center;
 }
 
-.container
+.image-container
 {
     position: relative;
+    display: block;
 }
 
-#title, #slogan, #bottom-text
+#title, #slogan, #credits
 {
     position: absolute;
     display: flex;
     flex-direction: column;
-    margin: 2%;
 }
 
 #title
 {
     flex-direction: row;
-    top: 0;
+    top: 2.5%;
     left: 50%;
     transform: translate(-50%);
-    margin: 1.5% 0;
     align-items: baseline;
-    font-family: Arial, sans-serif;
+    font-family: Serif-Gothic-Black, Arial, sans-serif;
     text-align: center;
     text-shadow: #FF0000 0.125vw 0.1vh, #FF0000 -0.1vw 0.1vh, #FF0000 0.1vw -0.1vh, #FF0000 -0.1vw -0.1vh;
 }
@@ -102,14 +117,35 @@ body
 {
     font-size: 120%;
 }
+#title :nth-child(3)
+{
+    transform: translate(-5%) scaleX(0.85);
+}
+#title :nth-child(4)
+{
+    transform: translate(-10%) scaleX(0.85);
+}
+#title :nth-child(5), #title :nth-child(6)
+{
+    transform: translate(-12.5%) scaleX(1.1);
+}
+#title :nth-child(7)
+{
+    transform: translate(-20%);
+}
+#title :nth-child(8)
+{
+    transform: translate(-10%);
+}
 
 #slogan
 {
-    top: 57%;
-    left: 7.5%;
-    font-family: Futura, sans-serif;
-    line-height: 0.9;
-    letter-spacing: -0.15vw;
+    top: 54%;
+    left: 50%;
+    transform: translate(-180%) scaleX(0.9);
+    font-family: Serif-Gothic-Black, Arial, serif;
+    line-height: 0.85;
+    letter-spacing: -0.3vw;
 }
 
 #slogan :nth-child(3)
@@ -118,15 +154,15 @@ body
     font-style: italic;
 }
 
-#bottom-text
+#credits
 {
-    bottom: 0;
+    bottom: 3.5%;
     left: 50%;
-    width: 300%;
-    transform: translate(-50%, 0) scaleX(0.25);
-    font-family: monospace;
+    width: 175%;
+    transform: translate(-50%, 0) scaleX(0.6);
+    font-family: Compacta-Light, monospace;
     text-align: center;
-    margin: 0;
+    white-space: pre;
     line-height: 0.9;
 }
 
@@ -140,22 +176,23 @@ body
 
 @media screen and (min-width: 501px)
 {
-    .container
+    .image-container
     {
-        height: 99vh;
+        height: 99.5vh;
         font-size: 2vh;
-        margin: 0 auto;
     }
 
     img
     {
-        max-width: 100%;
+        display: block;
         height: inherit;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     #title
     {
-        font-size: 435%;
+        font-size: 360%;
     }
 
     #slogan
@@ -163,7 +200,7 @@ body
         font-size: 240%;
     }
 
-    #bottom-text
+    #credits
     {
         font-size: 150%;
     }
@@ -174,12 +211,11 @@ body
     img
     {
         width: 100%;
-        max-height: 100%;
     }
 
     #title
     {
-        font-size: 13.5vw;
+        font-size: 11vw;
     }
 
     #slogan
@@ -187,9 +223,8 @@ body
         font-size: 7.25vw;
     }
 
-    #bottom-text
+    #credits
     {
         font-size: 5vw;
-        margin-bottom: 1%;
     }
 }
